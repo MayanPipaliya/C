@@ -3,7 +3,7 @@
 int main()
 {
     char string[40];
-    int length=0, flag=1,i;
+    int length=0, n=1,i;
 
     printf("Enter string:\n");
     gets(string);
@@ -17,12 +17,12 @@ int main()
     {
         if( string[i] != string[length-1-i] )
         {
-            flag=0;
+            n=0;
             break;
         }
     }
 
-    if(flag==1)
+    if(n==1)
     {
         printf("PALINDROME");
     }
