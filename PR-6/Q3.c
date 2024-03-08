@@ -42,8 +42,7 @@ main()
 		}
 	
 	}
-	
-	printf("\n%d %d %d %d",cp,sm,sp,num);
+
 	((num>=1) && (cp>=1) && (sm>=1) && (sp>=1) && (n>=6))
 		?printf("\n!! Your Password Is Strong !!")
 		:printf("\n!! Your Password Is Not Strong !!");
