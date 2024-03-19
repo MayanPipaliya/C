@@ -1,34 +1,21 @@
 #include<stdio.h>
+#include<string.h>
 
-int main()
+main()
 {
-    char string[40];
-    int length=0, n=1,i;
-
-    printf("Enter string:\n");
-    gets(string);
-
-    for(i=0;string[i]!='\0';i++)
-    {
-        length++;
-    }
-
-    for(i=0;i< length/2;i++)
-    {
-        if( string[i] != string[length-1-i] )
-        {
-            n=0;
-            break;
-        }
-    }
-
-    if(n==1)
-    {
-        printf("PALINDROME");
-    }
-    else
-    {
-        printf("NOT PALINDROME");
-    }
-    return 0;
+	char name[20],myName[20];
+	char rev[20];
+	
+	printf("Enter your Name :");
+	gets(name);
+	
+	strlwr(name);
+	
+	strcpy(myName, name);
+	
+	strcpy(rev , strrev(myName));
+	
+	(strcmp(name,rev)==0)
+		?puts("This name is palindrom")
+		:puts("This name is not palindrom");
 }

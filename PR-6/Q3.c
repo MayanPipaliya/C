@@ -1,50 +1,42 @@
 #include<stdio.h>
+#include<string.h>
 
 main()
 {
 	char pass[20];
 	
-	printf("Enter Your password : ");
-	scanf("%s",&pass);
+	printf("enter your password : ");
+	gets(pass);
 	
-	int i,n=strlen(pass),number=0,capital=0,small=0,special=0;
+	int i,num=0,len,capital=0,small=0,special=0,a;
 	
-	
-	for(i=0;pass[i]!='\0';i++)
+	for(i=0;pass[i] != NULL ;i++)
 	{
-		if(pass[i] >= 'A' && pass[i] <= 'Z')
+		len++;
+	}
+		
+	for(i=0;pass[i] != NULL ; i++)
+	{
+		if(pass[i]>='A' && pass[i]<='Z')
 		{
 			capital++;
 		}
-		else if(pass[i] >= 'a' && pass[i] <= 'z')				
+		else if(pass[i]>='a' && pass[i]<='z')
 		{
 			small++;
 		}
-		else if(pass[i] >= '!' && pass[i] <= '/')
+		else if(pass[i]>='0' && pass[i]<='9')
 		{
-			special++;			
+			num++;
 		}
-		else if(pass[i] >= ':' && pass[i] <= '@')
-		{
-			special++;
-		}
-		else if(pass[i] >= '[' && pass[i] <= '`')
+		else
 		{
 			special++;
 		}
-		else if(pass[i] >= '{' && pass[i] <= '~')
-		{
-			special++;
-		}
-		else if(pass[i] >= '0' && pass[i] <= '9')
-		{
-			number++;		
-		}
-	
 	}
 	
-	((number>=1) && (capital>=1) && (small>=1) && (special>=1) && (n>=6))
-		?printf("\n!! Your Password Is Strong !!")
-		:printf("\n!! Your Password Is Not Strong !!");
+	( (num>=1) && (capital>=1) && (small>=1) && (special>=1) && (len>=6) )
+			?printf("password is strong !! ")
+			:printf("password is not strong !! ");
 
 }
