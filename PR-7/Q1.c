@@ -4,13 +4,13 @@ void calc()
 {
 	int a,b,choice;
 	
-	SW:
+	AB:
 	
 		printf("1) For +\n");
 		printf("2) For -\n");
 		printf("3) For *\n");
 		printf("4) For /\n");
-		printf("5) For %\n");
+		printf("5) For %%\n");
 		printf("6) For Exit\n");	
 		printf("\n\nEnter Your Choice : ");
 		scanf("%d",&choice);
@@ -24,7 +24,7 @@ void calc()
 				printf("Enter b : ");
 				scanf("%d",&b);
 				printf("\nAddition Of %d and %d : %d\n\n",a,b,a+b);
-				goto SW;
+				goto AB;
 		
 		case 2:
 				printf("Enter a : ");
@@ -32,7 +32,7 @@ void calc()
 				printf("Enter b : ");
 				scanf("%d",&b);
 				printf("\nSubtraction Of %d and %d : %d\n\n",a,b,a-b);
-				goto SW;
+				goto AB;
 			
 		case 3:
 				printf("Enter a : ");
@@ -40,7 +40,7 @@ void calc()
 				printf("Enter b : ");
 				scanf("%d",&b);
 				printf("\nMultiplication Of %d and %d : %d\n\n",a,b,a*b);
-				goto SW;
+				goto AB;
 			
 		case 4:
 				printf("Enter a : ");
@@ -56,7 +56,7 @@ void calc()
 				{
 					printf("\nDivision Of %d and %d : %d\n\n",a,b,a/b);	
 				}
-				goto SW;
+				goto AB;
 			
 		case 5:
 				printf("Enter a : ");
@@ -64,7 +64,7 @@ void calc()
 				printf("Enter b : ");
 				scanf("%d",&b);
 				printf("\nModulus Of %d and %d : %d\n\n",a,b,a%b);
-				goto SW;
+				goto AB;
 			
 		case 6:
 				printf("\n\nYOU EXIT THIS PROGRAAM !!");
@@ -72,7 +72,7 @@ void calc()
 			
 		default :
 				printf("\n\nENTER VALID INPUT !!\n\n");
-				goto SW;
+				goto AB;
 	}	
 }
 
