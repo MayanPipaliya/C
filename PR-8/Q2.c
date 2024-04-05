@@ -28,7 +28,7 @@ void ptr(int size)
 	{
 		for(j=0; j<size; j++)
 		{
-			printf("%d",(*ptr[i][j])*(*ptr[i][j])*(*ptr[i][j]));
+			printf("%d",(*ptr[i][j])*(*ptr[i][j]));
 			printf("\n");
 		}
 	}
